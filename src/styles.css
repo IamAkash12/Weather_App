@@ -1,0 +1,6 @@
+body {
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    font-family: 'Poppins', sans-serif;
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

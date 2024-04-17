@@ -1,0 +1,33 @@
+<mat-card class="weather-card">
+    <mat-card-content>
+      <mat-form-field appearance="outline" class="search-input">
+        <input matInput [(ngModel)]="cityName" (keyup.enter)="onCityNameChange()" class="search-input-txt" as="textInput">
+      </mat-form-field>
+      <button mat-raised-button color="primary" class="search-btn" (click)="onCityNameChange()">Search</button>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-content class="weather-info">
+      <img src="https://openweathermap.org/img/wn/{{data.imageURl}}@2x.png" alt="weather-icon">
+      <div class="temprature">{{data.temp}}°C</div>
+      <div class="description">{{data.main}}</div>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-content class="additional-info">
+      <div class="info-item">
+        <span>Feels like</span>
+        <span>{{data.feelsLike}}°C</span>
+      </div>
+      <div class="info-item">
+        <span>Pressure:</span>
+        <span>{{data.pressure}}hPa</span>
+      </div>
+      <div class="info-item">
+        <span>Humidity:</span>
+        <span>{{data.humidity}}%</span>
+      </div>
+      <div class="info-item">
+        <span>City:</span>
+        <span>{{data.city}}</span>
+      </div>
+    </mat-card-content>
+  </mat-card>
